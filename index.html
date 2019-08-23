@@ -1,203 +1,341 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Independence Day Special</title>
-	<meta charset="utf-8">
-  	<meta name="viewport" content="width=device-width, initial-scale=1">
-  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<title>Birthday Wishing</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.19/jquery.scrollify.min.js">
+	<link href="https://fonts.googleapis.com/css?family=Hepta+Slab&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Pacifico&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Dancing+Script|EB+Garamond|Pacifico&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		.sec_scroll{
+			width: 100%;
+			height: 100vh;
+			background: radial-gradient(red, yellow, blue);
+		}
+
+		.main{
+			width: 75%;
+			height: 75vh;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			display: flex;
+		}
+
+		.right_div{
+			background-color: #000;
+			/*width: calc(50% + 50px);*/
+			width: 40%;
+			height: 100%;
+			font-family: 'Hepta Slab', serif;
+			font-size: 19px;
+			background: #000;
+			background-size: cover;
+			background-repeat: no-repeat;
+			box-sizing: border-box;
+			padding: 20px 20px;
+		}
+
+		.right_div h1{
+			color: #fff;
+			background: radial-gradient(#a3e82c, #2ce8e2);
+   			-webkit-background-clip: text;
+   			-webkit-text-fill-color: transparent;
+		}
+
+		.right_div p{
+			padding: 20px 0;
+			color: #fff;
+		}
+
+		.right_div span{
+			font-size: 1.5em;
+		}
+
+		.left_div{
+			width: 60%;
+			height: 100%;
+			box-sizing: border-box;
+			border-left: 10px solid transparent;
+			background: url('bg1.jpeg');
+			background-size: cover;
+			background-repeat: no-repeat;
+
+		}
+
+		.main1{
+			width: 75%;
+			height: 75%;
+			position: relative;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			display: flex;
+		}
+
+		.right_div1{
+			background-color: blue;
+			width: 60%;
+			height: 100%;
+			box-sizing: border-box;
+			border-right: 10px solid transparent;
+			background: url('bg4.jpeg');
+			background-size: cover;
+			background-repeat: no-repeat;
+
+		}
+
+		.left_div1{
+			background: #000;
+			width: 40%;
+			height: 100%;
+			box-sizing: border-box;
+			padding: 50px 20px;
+		}
+
+		.left_div1 h1{
+			font-family: 'Dancing Script', cursive;	
+			font-size: 2.5em;
+			color: #fff;
+			background: radial-gradient(#a534d1, #f50f54);
+   			-webkit-background-clip: text;
+   			-webkit-text-fill-color: transparent;
+		}
+
+		.main2{
+			width: 75%;
+			height: 75%;
+			position: relative;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			display: flex;
+		}
+
+		.right_div2{
+			background-color: #000;
+			width: 40%;
+			height: 100%;
+			box-sizing: border-box;
+			padding: 50px 20px;
+		}
+
+		.right_div2 h1{
+			color: #fff;
+			background: radial-gradient(#27f2a4, #fa9c0f);
+   			-webkit-background-clip: text;
+   			-webkit-text-fill-color: transparent;
+   			font-family: 'Dancing Script', cursive;
+			font-family: 'Pacifico', cursive;
+			letter-spacing: 2px;
+			font-weight: lighter;
+			font-size: 1.5em;
+		}
+
+		.left_div2{
+			background-color: orange;
+			border-left: 10px solid transparent;
+			width: 60%;
+			height: 100%;
+			box-sizing: border-box;
+			background: url('bg2.jpeg');
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+
+		.img1{
+			background: url('bg6.jpg');
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+
+		.img2{
+			background: url('bg8.jpg');
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+
+		.img3{
+			background: url('bg9.jpg');
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+
+		footer{
+			background: #fff;
+			width: 100%;
+			height: 10vh;
+			font-family: 'Dancing Script', cursive;
+			font-family: 'Pacifico', cursive;
+			font-family: 'EB Garamond', serif;
+			font-size: 0.75em;
+		}
+
+		footer div{
+			position: relative;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 75%;
+			height: 25%;
+			margin: auto;
+			display: flex;
+		}
+
+		footer div i{
+			margin-left: 100px;
+		}
+
+		footer h1{
+			text-align: center;
+			margin-top: 50px;
+		}
+
+		footer span{
+			margin: 0 15px;
+		}
+
+		.logo{
+			width: 160px;
+			height: 140px;
+		}
+		figure img{
+			width: 160px;
+			height: 160px;
+		}
+		figure{
+			width: 160px;
+			margin: auto;
+		}
+
+		@media only screen and (max-width: 995px){
+			.left_div{
+				background-position: -80px 0;
+			}
+
+			.right_div1{
+				background-position: -80px 0;
+			}
+
+			.left_div2{
+				background-position: -80px 0;
+			}
+
+			.right_div{
+				font-size: 1em;
+			}
+
+			.right_div2, .left_div1{
+				font-size: 12px;
+			}
+		}
+
+		@media only screen and (max-width: 777px){
+			.left_div{
+				background-position: -80px 0;
+			}
+
+			.right_div{
+				font-size: 12px;
+			}
+
+			.right_div2, .left_div1{
+				font-size: 8px;
+			}
+		}
+
+		@media only screen and (max-width: 460px){
+			.right_div{
+				font-size: 9px;
+			}
+
+			footer div i{
+				margin-left: 20px;
+			}
+
+			.left_div2{
+				background-position: -100px 0;
+			}
+
+			.right_div2{
+				font-size: 7px;
+			}
+
+			.logo{
+				height: 80px;
+				width: 120px;
+			}
+		}
+
+	</style>
+
 </head>
-<style type="text/css">
-	*{
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-		overflow: hidden;
-	}
-	.logo img{
-		width: 120px;
-		height: 100px;
-	}
-	.logo{
-		position: absolute;
-		top: 0;
-		left: 0;
-		margin-left: 15px;
-		animation: fade 2s linear infinite;
-	}
-
-	@keyframes fade{
-		0%{
-			transform: rotate(0deg) scale(1);
-		}
-		50%{
-			transform: rotate(-15deg) scale(1.5);
-		}
-	}
-
-	.flag{
-		width: 75%;
-		height: 75%;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		animation: flag 1s linear forwards;
-		animation-delay: 0.75s;
-
-	}
-	@keyframes flag{
-		0%{
-			transform: translate(-50%, -50%) rotate(0deg) scale(1);
-		}
-		100%{
-			transform: translate(-50%, -50%) rotate(-15deg) scale(1.5);
-		}
-	}
-		
-
-	.flag .flag_color1{
-		width: 100%;
-		height: 33%;
-		text-align: center;
-		text-transform: uppercase;
-		background-color: #ffb81f;
-		transform: scaleX(0);
-		animation: color1 1s linear forwards;
-		transform-origin: left;
-	}
-
-	.flag_color1 h2{
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		background: linear-gradient(90deg,#12c915,#fff,#12c915);
-		-webkit-background-clip: text;
-  		-webkit-text-fill-color: transparent;
-		overflow: hidden;
-		display: inline-block;
-		transform: translate(-50%, -50%);
-		animation: animate 10s linear infinite;
-	}
-
-	@keyframes animate{
-		0%{
-			left: 115%
-		}
-		100%{
-			left: -15%
-		}
-	}
-
-	@keyframes color1{
-		0%{
-			transform: scaleX(0);
-		}
-		100%{
-			transform: scaleX(1);
-		}
-	}
-
-	.flag_color2{
-		width: 100%;
-		height: 33%;
-		background-color: #12c915;
-		z-index: 0;
-		transform: scaleX(0);
-		animation: color2 1s linear forwards;
-		transform-origin: right;
-		animation-delay: 0.5s;
-	}
-
-	.flag_color2 h2{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	background: linear-gradient(90deg,#ffb81f,#fff,#ffb81f);
-	-webkit-background-clip: text;
-  	-webkit-text-fill-color: transparent;
-	overflow: hidden;
-	display: inline-block;
-	transform: translate(-50%, -50%) scale(0);
-	animation: animate1 10s linear infinite;
-	animation-delay: 10s;
-	}
-
-	@keyframes animate1{
-		0%{
-			transform: scale(1);
-			left: -15%
-		}
-		100%{
-			transform: scale(1);
-			left: 115%
-		}
-	}
-
-	@keyframes color2{
-		0%{
-			transform: scaleX(0);
-		}
-		100%{
-			transform: scaleX(1);
-		}
-	}
-
-	.chakra{
-		display: flex;
-		justify-content: center;
-		padding: 1px;
-		z-index: 1;
-		transform: scale(0);
-		animation: fadein 1s linear forwards;
-		animation-delay: 0.5s;
-	}
-
-	@keyframes fadein{
-		0%{
-			transform: scale(5);
-			opacity: 0;
-		}
-		100%{
-			transform: scale(1);
-			opacity: 1;
-		}
-	}
-	.chakra img{
-		width: 120px;
-		height: 120px;
-		transform: rotate(0deg);
-		animation: chakra 5s linear infinite;
-	}
-
-	@keyframes chakra{
-		0%{
-			transform: rotate(0deg);
-		}
-		100%{
-			transform: rotate(360deg);
-		}
-	}
-</style>
 <body>
-	<div class="logo">
-		<img src="logo.png">
+<header>
+	<nav></nav>
+</header>
+<section class="sec_scroll img1">
+	<img src="logo1.png" class="logo">
+	<div class="main">
+	<div class="right_div">
+		<h1>Happy Birthday Tanuj</h1>
+		<p><span>“</span> Happy birthday! I hope all your birthday wishes and dreams come true. <span>”</span></p><br>
+		<p><span>“</span> A wish for you on your birthday, whatever you ask may you receive, whatever you seek may you find, whatever you wish may it be fulfilled on your birthday and always. Happy birthday!<span>”</span></p>
 	</div>
-	<div class="flag">
-		<div class="flag_color1">
-			<h2>Happy Independence Day</h2>
-		</div>
-		<div class="chakra">
-			<img src="Ashoka_Chakra.png">
-		</div>
-		<div class="flag_color2">
-			<h2>Happy Independence Day</h2>
-		</div>
-		
+	<div class="left_div"></div>
 	</div>
+</section>
 
+<section class="sec_scroll img2">
+	<div class="main1">
+	<div class="right_div1"></div>
+	<div class="left_div1">
+		<h1>“Count your life by smiles, not tears. Count your age by friends, not years. Happy birthday Dear!”</h1>
+	</div>
+	</div>
+</section>
+
+<section class="sec_scroll img3">
+	<div class="main2">
+	<div class="right_div2">
+		<h1>“This birthday, I wish you abundant happiness and love. May all your dreams turn into reality and may lady luck visit your home today. Happy birthday to one of the sweetest people I’ve ever known.”</h1>
+	</div>
+	<div class="left_div2"></div>
+	</div>
+</section>
+<footer>
+	<div>
+		<a href="https://github.com/mrankushverma75/My-Projects" target="_blank"><i class="fa fa-github fa-3x" aria-hidden="true"></i></a>
+		<a href="#"><i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i></a>
+		<a href="#"><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></a>
+		<a href="http://devankushfolio.000webhostapp.com" target="_blank"><i class="fa fa-id-card fa-3x" aria-hidden="true"></i></a>
+	</div><br>
+	<h1>Developer <span>::</span> Ankush Verma</h1><br>
+	<figure>
+		<img src="logo1.png">
+	</figure>
+	<h1>&copy 2019 | copyright</h1>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.19/jquery.scrollify.min.js" integrity="sha256-RGlAwHKG24hsj1109SGQgvR+Orx7u8c6zyYH4Tk3ydU=" crossorigin="anonymous"></script>
+
+<script>
+	$(function() {
+         $.scrollify({
+           section : ".sec_scroll",
+         });
+       });
 </script>
 </body>
 </html>
